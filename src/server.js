@@ -1,6 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
 const axios = require('axios');
 
 const app = express();
@@ -9,7 +8,6 @@ const SMS_TOKEN = process.env.SMS_TOKEN;
 const SMS_BASE_URL = process.env.SMS_BASE_URL || 'https://sms.aresfun.com';
 
 // Middlewares
-app.use(cors());
 app.use(express.json());
 
 // Validação do token
